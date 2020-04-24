@@ -27,7 +27,7 @@ namespace Web
             if (dt.Count > 0)
             {
 
-                Session["UsuarioLogado"] = dt[0];
+                Session["IdUsuarioLogado"] = dt[0].idusuario;
                 Session["NomeUsuarioLogado"] = dt[0].nome;
 
                 Response.Redirect("painel.asp");

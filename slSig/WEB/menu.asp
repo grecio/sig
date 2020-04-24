@@ -7,21 +7,21 @@
 		
         Dim iMenus, iSubMenus
                 
-        Dim vetMenus(3, 1), vetSubMenus()
+        Dim vetMenus(2, 1), vetSubMenus()
 		
         vetMenus(0, 0) = "Cadastros Principais"
-        Redim vetSubMenus(1, 1)
+        Redim vetSubMenus(1, 2)
 		  
         vetSubMenus(0, 0) = "Cadastro de Cliente"
         vetSubMenus(0, 1) = "clientes.aspx"	          
         
-        vetSubMenus(1, 0) = "Cadastro de Usuários"
+        vetSubMenus(1, 0) = "Cadastro de Usuario"
         vetSubMenus(1, 1) = "usuarios.aspx"
         
         vetMenus(0, 1) = vetSubMenus		
 
 
-        vetMenus(1, 0) = "Criação"
+        vetMenus(1, 0) = "Criacao"
 		
         Redim vetSubMenus(1, 2)
 		
@@ -30,57 +30,20 @@
 		
         vetSubMenus(1, 0) = "Workpack"
         vetSubMenus(1, 1) = "workback.aspx"
-        		  				  
-
+        		  				 
         vetMenus(1, 1) = vetSubMenus
 		
-        vetMenus(2, 0) = "Gestor de Cotas"
-		
-        Redim vetSubMenus(2, 2)		
-	
-        vetSubMenus(1, 0) = "Im&oacute;veis"
-        vetSubMenus(1, 1) = "gestor_cotas_imoveis.aspx"
+        vetMenus(2, 0) = "Sistema"
 
-        vetSubMenus(0, 0) = "Ve&iacute;culos"
-        vetSubMenus(0, 1) = "gestor_cotas_veiculos.aspx"
-		
-        vetSubMenus(2, 0) = "Precifica&ccedil;&atilde;o"
-        vetSubMenus(2, 1) = "precificacao.aspx"
-		          
-		
-        vetMenus(2, 1) = vetSubMenus
-		
-        vetMenus(3, 0) = "Gestor (compra/venda)"
-        
-        Redim vetSubMenus(1, 2)		
-
-        
-        vetSubMenus(0, 0) = "Interessados (comprar)"
-        vetSubMenus(0, 1) = "interessados_comprar.aspx"
-
-        vetSubMenus(1, 0) = "Interessados (Vender)"
-        vetSubMenus(1, 1) = "interessados_vender.aspx" 
-          
-        vetMenus(3, 1) = vetSubMenus
-
-
-        vetMenus(4, 0) = "Sistema"
-
-        Redim vetSubMenus(3, 2)
+        Redim vetSubMenus(1, 2)
         
         vetSubMenus(0, 0) = "Alterar Senha"
         vetSubMenus(0, 1) = "alterar_senha.aspx"
 
-        vetSubMenus(1, 0) = "Contatos"
-        vetSubMenus(1, 1) = "contato.aspx"
+        vetSubMenus(1, 0) = "Sair"
+        vetSubMenus(1, 1) = "logout.aspx"
 
-        vetSubMenus(2, 0) = "Newsletter"
-        vetSubMenus(2, 1) = "newsletter.aspx"
-
-        vetSubMenus(3, 0) = "Sair"
-        vetSubMenus(3, 1) = "logout.aspx"
-
-        vetMenus(4, 1) = vetSubMenus                    
+        vetMenus(2, 1) = vetSubMenus                    
                 	
 
 
