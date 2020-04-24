@@ -53,8 +53,7 @@ namespace ConnectionFramework
             foreach (SqlCommand command in commands)
                 command.Transaction = transaction;
 
-            SetConnection(tableAdapter, transaction.Connection);
+            SetConnection(tableAdapter,  transaction.Connection);
         }
     }
-
 }
