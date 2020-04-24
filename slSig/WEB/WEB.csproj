@@ -248,6 +248,7 @@
     <Content Include="Painel.Master" />
     <Content Include="Scripts\jquery-2.1.1.min.map" />
     <Content Include="imgs\botoes\Thumbs.db" />
+    <None Include="Properties\PublishProfiles\Producao.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="painel.asp" />
     <Content Include="Scripts\bootstrap.js" />

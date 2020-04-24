@@ -87,13 +87,13 @@ namespace Web
         protected global::System.Web.UI.WebControls.Label Label6;
 
         /// <summary>
-        /// txtCPF control.
+        /// txtCpfCnpj control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCPF;
+        protected global::System.Web.UI.WebControls.TextBox txtCpfCnpj;
 
         /// <summary>
         /// Label13 control.
@@ -105,13 +105,13 @@ namespace Web
         protected global::System.Web.UI.WebControls.Label Label13;
 
         /// <summary>
-        /// txtCPF0 control.
+        /// txtTelefone control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCPF0;
+        protected global::System.Web.UI.WebControls.TextBox txtTelefone;
 
         /// <summary>
         /// btnSalvar control.

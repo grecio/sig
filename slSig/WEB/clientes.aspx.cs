@@ -47,17 +47,13 @@ namespace Web
 
             Validador.Validar(dt.Count > 0, "Não foi possível recuperar o registro selecionado.");
 
-            IdCliente = dt[0].ID;
+            IdCliente = dt[0].idcliente;
 
-            txtNome.Text = dt[0].Nome;
-            txtEmail.Text = dt[0].Email;
-            txtCPF.Text = dt[0].CPF;
-            txtFixoDDD.Text = dt[0].FixoDDD;
-            txtFixoNumero.Text = dt[0].FixoNumero;
-            txtCelularDDD.Text = dt[0].CelularDDD;
-            txtCelularNumero.Text = dt[0].CelularNumero;
-
-        }
+            txtNome.Text = dt[0].nome;
+            txtEmail.Text = dt[0].email;
+            txtCpfCnpj.Text = dt[0].cpfcnpj;
+            txtTelefone.Text = dt[0].telefone;
+         }
 
         #endregion
 
@@ -76,31 +72,14 @@ namespace Web
             Response.Redirect("clientes.aspx");
         }
 
-        protected void grdList_RowDataBound(object sender, GridViewRowEventArgs e)
-        {
-            if (e.Row.RowType == DataControlRowType.DataRow)
-            {
-                var lblTelefone = e.Row.FindControl("lblTelefone") as Label;
-
-                
-                if (lblTelefone != null)
-                {
-                    if (DataBinder.Eval(e.Row.DataItem, "CelularNUmero").ToString().Length > 7)
-                    {
-                        lblTelefone.Text = string.Format("{0} {1}", DataBinder.Eval(e.Row.DataItem, "CelularDDD"), DataBinder.Eval(e.Row.DataItem, "CelularNUmero"));                        
-                    }
-                    
-                }
-            }
-        }
+       
 
         protected void btnSalvar_Click(object sender, EventArgs e)
         {
             try
             {
                 BLL.Cliente.Salvar(txtNome.Text, txtEmail.Text,
-                    txtCPF.Text, txtFixoDDD.Text, txtFixoNumero.Text,
-                    txtCelularDDD.Text, txtCelularNumero.Text, IdCliente);
+                    txtCpfCnpj.Text, txtTelefone.Text, IdCliente);
 
                 Listar();
 

@@ -41,6 +41,39 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DsArtefato.Designer.cs">
+      <DependentUpon>DsArtefato.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="DsBriefing.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsBriefing.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DsCliente.cs">
+      <DependentUpon>DsCliente.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DsCliente.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsCliente.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DsImportacaoDados.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsImportacaoDados.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DsPlano.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsPlano.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DsPlanoCliente.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsPlanoCliente.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DsUsuario.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -55,6 +88,72 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="DsArtefato.xsc">
+      <DependentUpon>DsArtefato.xsd</DependentUpon>
+    </None>
+    <None Include="DsArtefato.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsArtefato.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DsArtefato.xss">
+      <DependentUpon>DsArtefato.xsd</DependentUpon>
+    </None>
+    <None Include="DsBriefing.xsc">
+      <DependentUpon>DsBriefing.xsd</DependentUpon>
+    </None>
+    <None Include="DsBriefing.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsBriefing.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DsBriefing.xss">
+      <DependentUpon>DsBriefing.xsd</DependentUpon>
+    </None>
+    <None Include="DsCliente.xsc">
+      <DependentUpon>DsCliente.xsd</DependentUpon>
+    </None>
+    <None Include="DsCliente.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsCliente.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DsCliente.xss">
+      <DependentUpon>DsCliente.xsd</DependentUpon>
+    </None>
+    <None Include="DsImportacaoDados.xsc">
+      <DependentUpon>DsImportacaoDados.xsd</DependentUpon>
+    </None>
+    <None Include="DsImportacaoDados.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsImportacaoDados.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DsImportacaoDados.xss">
+      <DependentUpon>DsImportacaoDados.xsd</DependentUpon>
+    </None>
+    <None Include="DsPlano.xsc">
+      <DependentUpon>DsPlano.xsd</DependentUpon>
+    </None>
+    <None Include="DsPlano.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsPlano.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DsPlano.xss">
+      <DependentUpon>DsPlano.xsd</DependentUpon>
+    </None>
+    <None Include="DsPlanoCliente.xsc">
+      <DependentUpon>DsPlanoCliente.xsd</DependentUpon>
+    </None>
+    <None Include="DsPlanoCliente.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsPlanoCliente.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DsPlanoCliente.xss">
+      <DependentUpon>DsPlanoCliente.xsd</DependentUpon>
+    </None>
     <None Include="DsUsuario.xsc">
       <DependentUpon>DsUsuario.xsd</DependentUpon>
     </None>

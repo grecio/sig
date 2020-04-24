@@ -95,10 +95,10 @@
                     </tr>
                     <tr>
                         <td>
-                            <asp:Label ID="Label6" runat="server" CssClass="lbl" Text="CPF:"></asp:Label>
+                            <asp:Label ID="Label6" runat="server" CssClass="lbl" Text="CPF/CNPJ:"></asp:Label>
                         </td>
                         <td>
-                            <asp:TextBox ID="txtCPF" runat="server" CssClass="txt" Width="200px" data-mask="integer"></asp:TextBox>
+                            <asp:TextBox ID="txtCpfCnpj" runat="server" CssClass="txt" Width="200px" data-mask="integer"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>
@@ -106,7 +106,7 @@
                             <asp:Label ID="Label13" runat="server" CssClass="lbl" Text="Telefone:"></asp:Label>
                         </td>
                         <td>
-                            <asp:TextBox ID="txtCPF0" runat="server" CssClass="txt" Width="200px" data-mask="integer"></asp:TextBox>
+                            <asp:TextBox ID="txtTelefone" runat="server" CssClass="txt" Width="200px" data-mask="integer"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>
