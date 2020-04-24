@@ -1484,7 +1484,7 @@ namespace DAL.DsImportacaoDadosTableAdapters {
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dependentes", global::System.Data.SqlDbType.VarChar, 250, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "dbo.stpImportacaoDadosIns";
+            this._commandCollection[2].CommandText = "dbo.stpXico";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idimportacao", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1545,7 +1545,7 @@ namespace DAL.DsImportacaoDadosTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
-        public virtual object Inserir(global::System.Nullable<int> idimportacao, string nome, string contrato, global::System.Nullable<int> idplano, global::System.Nullable<int> idplanocliente, global::System.Nullable<int> qtd) {
+        public virtual int xico(global::System.Nullable<int> idimportacao, string nome, string contrato, global::System.Nullable<int> idplano, global::System.Nullable<int> idplanocliente, global::System.Nullable<int> qtd) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
             if ((idimportacao.HasValue == true)) {
                 command.Parameters[1].Value = ((int)(idimportacao.Value));
@@ -1588,22 +1588,16 @@ namespace DAL.DsImportacaoDadosTableAdapters {
                         != global::System.Data.ConnectionState.Open)) {
                 command.Connection.Open();
             }
-            object returnValue;
+            int returnValue;
             try {
-                returnValue = command.ExecuteScalar();
+                returnValue = command.ExecuteNonQuery();
             }
             finally {
                 if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
                     command.Connection.Close();
                 }
             }
-            if (((returnValue == null) 
-                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
-                return null;
-            }
-            else {
-                return ((object)(returnValue));
-            }
+            return returnValue;
         }
     }
     

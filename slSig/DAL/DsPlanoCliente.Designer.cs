@@ -813,7 +813,7 @@ namespace DAL.DsPlanoClienteTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
-        public virtual int Inserir(string planocliente) {
+        public virtual object Inserir(string planocliente) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
             if ((planocliente == null)) {
                 command.Parameters[1].Value = global::System.DBNull.Value;
@@ -826,16 +826,22 @@ namespace DAL.DsPlanoClienteTableAdapters {
                         != global::System.Data.ConnectionState.Open)) {
                 command.Connection.Open();
             }
-            int returnValue;
+            object returnValue;
             try {
-                returnValue = command.ExecuteNonQuery();
+                returnValue = command.ExecuteScalar();
             }
             finally {
                 if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
                     command.Connection.Close();
                 }
             }
-            return returnValue;
+            if (((returnValue == null) 
+                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
+                return null;
+            }
+            else {
+                return ((object)(returnValue));
+            }
         }
     }
     

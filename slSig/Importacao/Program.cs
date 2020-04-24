@@ -16,17 +16,21 @@ namespace Importacao
             var adpPlano = new DAL.DsPlanoTableAdapters.PlanoTableAdapter();
             var adp = new DAL.DsImportacaoDadosTableAdapters.ImportacaoDadosTableAdapter();
 
+
             DAL.DsPlano.PlanoDataTable dtPlano = null;
             DAL.DsPlanoCliente.PlanoClienteDataTable dtPlanoCliente = null;
 
             var trn = ConnectionFramework.SqlAdapterHelper.BeginTransaction(adp);
 
+
+            ConnectionFramework.SqlAdapterHelper.SetTransaction(adp, trn);
             ConnectionFramework.SqlAdapterHelper.SetTransaction(adpPlano, trn);
             ConnectionFramework.SqlAdapterHelper.SetTransaction(adpPlanoCliente, trn);
 
 
             try
             {
+
                 GerenciadorDiretorio.SelecionarArquivosTxt(@"C:\inetpub\wwwroot\projetos_git\sig\slSig\Importacao\arquivos-importar\");
 
                 foreach (var item in GerenciadorDiretorio.Arquivos)
@@ -48,7 +52,8 @@ namespace Importacao
                         idplano = !dtPlano.Any() ? Convert.ToInt32(adpPlano.Inserir(titular.Plano)) : dtPlano[0].idplano;
                         idplanocliente = !dtPlanoCliente.Any() ? Convert.ToInt32(adpPlanoCliente.Inserir(titular.PlanoCliente)) : dtPlanoCliente[0].idplanocliente;
 
-                        idImportacao = Convert.ToInt32(adp.Inserir(1, titular.Titular, titular.NumeroContrato, 2, idplanocliente, titular.Quantidade));
+
+                        idImportacao = Convert.ToInt32(adp.xico(1, titular.Titular, titular.NumeroContrato, idplano, idplanocliente, titular.Quantidade));
 
                         foreach (var dep in titular.Dependentes)
                         {
@@ -57,7 +62,7 @@ namespace Importacao
                     }
                 }
 
-                trn.Commit();
+               trn.Commit();
 
             }
             catch (Exception ex)

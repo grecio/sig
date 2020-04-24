@@ -46,12 +46,21 @@ namespace ConnectionFramework
 
         public static void SetTransaction(object tableAdapter, SqlTransaction transaction)
         {
+
             Type type = tableAdapter.GetType();
+
+            var trn = type.GetProperty("Transaction", BindingFlags.NonPublic | BindingFlags.Instance);
+            trn.SetValue(tableAdapter, transaction);
+
+
             PropertyInfo commandsProperty = type.GetProperty("CommandCollection", BindingFlags.NonPublic | BindingFlags.Instance);
             SqlCommand[] commands = (SqlCommand[])commandsProperty.GetValue(tableAdapter, null);
 
             foreach (SqlCommand command in commands)
+            {
                 command.Transaction = transaction;
+                command.Connection = transaction.Connection;
+            }
 
             SetConnection(tableAdapter,  transaction.Connection);
         }

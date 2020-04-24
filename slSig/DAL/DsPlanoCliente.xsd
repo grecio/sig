@@ -25,7 +25,7 @@
               <Mapping SourceColumn="planocliente" DataSetColumn="planocliente" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="natalprinterConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="Inserir" Modifier="Public" Name="Inserir" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="Inserir">
+              <DbSource ConnectionRef="natalprinterConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="Inserir" Modifier="Public" Name="Inserir" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="Inserir">
                 <InsertCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.stpPlanoClienteIns</CommandText>
@@ -57,7 +57,7 @@
   <xs:element name="DsPlanoCliente" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DsPlanoCliente" msprop:Generator_UserDSName="DsPlanoCliente">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="PlanoCliente" msprop:Generator_TableClassName="PlanoClienteDataTable" msprop:Generator_TableVarName="tablePlanoCliente" msprop:Generator_TablePropName="PlanoCliente" msprop:Generator_RowDeletingName="PlanoClienteRowDeleting" msprop:Generator_RowChangingName="PlanoClienteRowChanging" msprop:Generator_RowEvHandlerName="PlanoClienteRowChangeEventHandler" msprop:Generator_RowDeletedName="PlanoClienteRowDeleted" msprop:Generator_UserTableName="PlanoCliente" msprop:Generator_RowChangedName="PlanoClienteRowChanged" msprop:Generator_RowEvArgName="PlanoClienteRowChangeEvent" msprop:Generator_RowClassName="PlanoClienteRow">
+        <xs:element name="PlanoCliente" msprop:Generator_TableClassName="PlanoClienteDataTable" msprop:Generator_TableVarName="tablePlanoCliente" msprop:Generator_RowChangedName="PlanoClienteRowChanged" msprop:Generator_TablePropName="PlanoCliente" msprop:Generator_RowDeletingName="PlanoClienteRowDeleting" msprop:Generator_RowChangingName="PlanoClienteRowChanging" msprop:Generator_RowEvHandlerName="PlanoClienteRowChangeEventHandler" msprop:Generator_RowDeletedName="PlanoClienteRowDeleted" msprop:Generator_RowClassName="PlanoClienteRow" msprop:Generator_UserTableName="PlanoCliente" msprop:Generator_RowEvArgName="PlanoClienteRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idplanocliente" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidplanocliente" msprop:Generator_ColumnPropNameInRow="idplanocliente" msprop:Generator_ColumnPropNameInTable="idplanoclienteColumn" msprop:Generator_UserColumnName="idplanocliente" type="xs:int" />

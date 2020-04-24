@@ -13,7 +13,7 @@ namespace BLL
         {
             using (var adp = new DAL.DsImportacaoDadosTableAdapters.ImportacaoDadosTableAdapter())
             {
-                adp.Inserir(idimportacao, nome, contrato, idplano, idplanocliente,qtd);
+                adp.xico(idimportacao, nome, contrato, idplano, idplanocliente,qtd);
             }
         }
 
