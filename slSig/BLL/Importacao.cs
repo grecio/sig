@@ -8,11 +8,12 @@ namespace BLL
 {
     public static class Importacao
     {
-        public static void Inserir(global::System.Nullable<int> idimportacao, string nome, string contrato, global::System.Nullable<int> idplano)
+        public static void Inserir(global::System.Nullable<int> idimportacao, string nome, string contrato, global::System.Nullable<int> idplano, 
+            global::System.Nullable<int> idplanocliente, global::System.Nullable<int> qtd)
         {
             using (var adp = new DAL.DsImportacaoDadosTableAdapters.ImportacaoDadosTableAdapter())
             {
-                adp.Inserir(idimportacao, nome, contrato, idplano);
+                adp.Inserir(idimportacao, nome, contrato, idplano, idplanocliente,qtd);
             }
         }
 

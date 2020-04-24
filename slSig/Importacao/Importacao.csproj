@@ -43,11 +43,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CartaoDadosDependente.cs" />
+    <Compile Include="CartaoDadosTitular.cs" />
+    <Compile Include="GerenciadorDiretorio.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="arquivos-importados\" />
+    <Folder Include="arquivos-importar\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{4e76637e-2b26-496f-8fa8-7b6cef5a02ec}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ConnectionFramework\ConnectionFramework.csproj">
+      <Project>{3be11c6e-9c05-4ec6-8059-72d0839c97e3}</Project>
+      <Name>ConnectionFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{94d596fe-480a-40ad-82b0-0e60f9468056}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Framework\Framework.csproj">
+      <Project>{6bc589e7-5250-4e20-bd77-be22ad951c33}</Project>
+      <Name>Framework</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
