@@ -1,0 +1,129 @@
+﻿
+body {
+}
+
+.linha  {
+
+    border-bottom:1px solid #ccc;
+    
+}
+
+.tit 
+{
+    FONT-FAMILY: Tahoma, Verdana, Helvetica, sans-serif;
+    FONT-SIZE: 14pt;
+    color:#213D60;
+    padding-bottom:5px;
+}
+
+.TitDivBot 
+{
+	border-bottom: 1px solid #D8D6A1;
+}
+
+.subform {    
+    
+	background: #F0F0F0;
+	
+}
+
+.lbl {
+
+    font-family: Tahoma, Arial, Verdana;
+    font-size: 11px;
+    color: #000;
+}
+
+.lblbold {
+
+    font-family: Tahoma, Arial, Verdana;
+    font-size: 11px;
+    color: #000;
+    font-weight:bold;
+}
+
+
+.lbl2 {
+
+    font-family: Tahoma, Arial, Verdana;
+    font-size: 12px;
+    color: #000;
+}
+
+.lbl3 {
+    
+    font-family: Verdana, Arial, Tahoman;
+    font-size: 10px;
+    color: #000;
+    
+}
+
+.txt  {
+    
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#000;
+
+	height:15px;
+	border:1px solid #294B76;
+	background: #fff url(imgs/botoes/bk-txt.jpg) bottom left repeat-x;
+	
+	padding:3px 0px 3px 10px;     
+}
+
+.txt-focus  {
+    
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#000;
+
+	height:15px;
+	border:1px solid #0000FF;
+	background: #fff url(imgs/botoes/bk-txt.jpg) bottom left repeat-x;
+	
+	padding:3px 0px 3px 10px;	      
+}
+
+.btn {
+
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	color:#333;	
+	
+	height:25px;
+	border:1px solid #333;	
+    background:#f5f5f5;
+	
+	padding:0px 5px 0px 5px;
+    cursor:pointer;
+}
+
+.btn:hover {
+
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	color:#fff;	
+	
+	height:25px;
+	border:1px solid #333;	
+    background:#FFB60F;
+	
+	padding:0px 5px 0px 5px;
+    cursor:pointer;
+    
+}
+
+.btn_colaborador {
+
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	color:#fff;	
+	
+	height:25px;
+	border:1px solid #333;	
+    background:#213D60;
+	
+	padding:0px 5px 0px 5px;
+    cursor:pointer;
+}
+

@@ -1,0 +1,15 @@
+.lnk
+{
+	font-family:'Trebuchet MS', Arial, Tahoma; 
+	font-size:11px; 
+	color:#A80000;
+	text-decoration:underline;
+}
+
+.lnk:hover
+{
+	font-family:'Trebuchet MS', Arial, Tahoma; 
+	font-size:11px; 
+	color:#510000;
+	text-decoration:underline;
+}

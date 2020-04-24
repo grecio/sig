@@ -1,0 +1,46 @@
+.txt
+{
+	border:1px solid #CCCCCC;
+	height:20px;
+	background-color: #F6F6F6;
+	
+	font-family:'Trebuchet MS', Arial, Tahoma; 
+	font-size:11px; 
+	color:#333;
+}
+
+.txtList
+{
+	border:1px solid #CCCCCC;
+	background-color: #F6F6F6;
+	
+	font-family:'Trebuchet MS', Arial, Tahoma; 
+	font-size:11px; 
+	color:#333;
+}
+
+
+.txtDis
+{
+	border:1px solid #717033;
+	height:20px;
+	background-color: #E0E0E0;
+}
+
+.btn
+{
+	font-family:'Trebuchet MS', Arial, Tahoma; 
+	font-size:11px; 
+	color:#333;
+	
+	background-color:#F1F1F1;
+	border: 1px solid #333;
+	
+	height: 21px;
+	
+}
+
+.tblcadastro
+{
+	text-align:center;
+}

@@ -1,0 +1,138 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Painel.master.cs" Inherits="Web.Painel" %>
+
+<!DOCTYPE html>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>Parnacon</title>
+    <link type="text/css" href="Content/StyleSheet.css" media="screen" rel="stylesheet" />
+    <link type="text/css" href="Content/grid.css" media="screen" rel="stylesheet" />
+    <script src="Scripts/jquery-2.1.1.js"></script>
+    <script src="Scripts/jquery.meiomask.js"></script>
+    <script src="Scripts/moment.min.js"></script>    
+    <!-- styles for this example page only -->
+    <style type="text/css">
+        body {
+            font-size: 80.5%;
+            margin: 0;
+            padding: 0;
+        }
+
+        #menuLog {
+            font-size: 1.4em;
+            margin: 20px;
+        }
+
+        .hidden {
+            position: absolute;
+            top: 0;
+            left: -9999px;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+        }
+
+        .fg-button {
+            clear: left;
+            margin: 0 4px 40px 20px;
+            padding: .4em 1em;
+            text-decoration: none !important;
+            cursor: pointer;
+            position: relative;
+            text-align: center;
+            zoom: 1;
+        }
+
+            .fg-button .ui-icon {
+                position: absolute;
+                top: 50%;
+                margin-top: -8px;
+                left: 50%;
+                margin-left: -8px;
+            }
+
+        a.fg-button {
+            float: left;
+        }
+
+        button.fg-button {
+            width: auto;
+            overflow: visible;
+        }
+        /* removes extra button width in IE */
+
+        .fg-button-icon-left {
+            padding-left: 2.1em;
+        }
+
+        .fg-button-icon-right {
+            padding-right: 2.1em;
+        }
+
+        .fg-button-icon-left .ui-icon {
+            right: auto;
+            left: .2em;
+            margin-left: 0;
+        }
+
+        .fg-button-icon-right .ui-icon {
+            left: auto;
+            right: .2em;
+            margin-left: 0;
+        }
+
+        .fg-button-icon-solo {
+            display: block;
+            width: 8px;
+            text-indent: -9999px;
+        }
+        /* solo icon buttons must have block properties for the text-indent to work */
+
+        .fg-button.ui-state-loading .ui-icon {
+            background: url(spinner_bar.gif) no-repeat 0 0;
+        }
+    </style>
+
+    <script type="text/javascript">   
+    
+        $(document).ready(function () {
+
+            $('input[data-mask]').each(function () {
+                var input = $(this);
+                input.setMask(input.data('mask'));
+            });
+          
+        });
+
+    
+    </script>
+
+    <style type="text/css">
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        #geral {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="geral">
+            <table border="0" cellpadding="2" cellspacing="2" width="100%">
+                <tr>
+                    <td>
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>                
+            </table>
+        </div>
+    </form>
+</body>
+</html>

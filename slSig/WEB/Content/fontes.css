@@ -1,0 +1,73 @@
+.lblbranco
+{
+	font-family:'Trebuchet MS', Arial, Tahoma; 
+	font-size:12px; 
+	color:#FFF;
+}
+
+.lblpreto
+{
+	font-family:'Trebuchet MS', Arial, Tahoma; 
+	font-size:11px; 
+	color:#000;
+}
+
+.lblmarrombold
+{
+	font-family:'Trebuchet MS', Arial, Tahoma; 
+	font-size:11px; 
+	color: #676767;
+}
+
+.lbltit
+{
+	font-family:'Trebuchet MS', Arial, Tahoma; 
+	font-size:17px; 
+	color:#333;
+	letter-spacing: 2px;
+	border-bottom: 1px solid #C42931;
+}
+
+.lbltit2
+{
+	font-family:'Trebuchet MS', Arial, Tahoma;
+	font-size:11px;
+	color: #333;
+	letter-spacing: 2px;
+	
+	background-color: #F4F4F2;
+	padding:2px 0px 2px 0px;
+	margin-left: 2px;
+	border-bottom:1px solid #DCDCD6;
+}
+
+.lbltit3
+{
+	font-family:'Trebuchet MS', Arial, Tahoma; 
+	font-size:14px; 
+	color:#333;
+	letter-spacing: 2px;
+}
+
+.bold
+{
+	font-weight: bold;	
+}
+
+.vermelho
+{
+	color: #FF0000;
+}
+
+.direita
+{
+	text-align:right;
+	width: 20%;	
+}
+
+.esquerda
+{
+	width: 50%;
+	text-align: left;
+	padding-left: 10px;
+}
