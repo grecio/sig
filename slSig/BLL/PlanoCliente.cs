@@ -8,19 +8,19 @@ namespace BLL
 {
     public static class PlanoCliente
     {
-        public static DAL.DsPlanoCliente.PlanoClienteDataTable SelecionarPorNome(string plano)
+        public static DAL.DsPlano.PlanoClienteDataTable SelecionarPorNome(string plano)
         {
 
-            using (var adp = new DAL.DsPlanoClienteTableAdapters.PlanoClienteTableAdapter())
+            using (var adp = new DAL.DsPlanoTableAdapters.PlanoClienteTableAdapter())
             {
-                return adp.Selecionar(plano);
+                return adp.SelecionarPorNome(plano);
             }
 
         }
 
         public static void Inserir(string planocliente)
         {
-            using (var adp = new DAL.DsPlanoClienteTableAdapters.PlanoClienteTableAdapter())
+            using (var adp = new DAL.DsPlanoTableAdapters.PlanoClienteTableAdapter())
             {
                 adp.Inserir(planocliente);
 

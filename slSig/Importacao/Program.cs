@@ -12,13 +12,13 @@ namespace Importacao
     {
         static void Main(string[] args)
         {
-            var adpPlanoCliente = new DAL.DsPlanoClienteTableAdapters.PlanoClienteTableAdapter();
+            var adpPlanoCliente = new DAL.DsPlanoTableAdapters.PlanoClienteTableAdapter();
             var adpPlano = new DAL.DsPlanoTableAdapters.PlanoTableAdapter();
-            var adp = new DAL.DsImportacaoDadosTableAdapters.ImportacaoDadosTableAdapter();
+            var adp = new DAL.DsImportacaoTableAdapters.ImportacaoTableAdapter();
 
 
             DAL.DsPlano.PlanoDataTable dtPlano = null;
-            DAL.DsPlanoCliente.PlanoClienteDataTable dtPlanoCliente = null;
+            DAL.DsPlano.PlanoClienteDataTable dtPlanoCliente = null;
 
             var trn = ConnectionFramework.SqlAdapterHelper.BeginTransaction(adp);
 
@@ -40,6 +40,8 @@ namespace Importacao
                     for (var i = 0; i < lines.Length; i += 1)
                     {
 
+                        Console.WriteLine(lines[i]);
+
                         var dados = lines[i].Split(';');
                         var titular = new CartaoDadosTitular(dados);
                         var idplano = 0;
@@ -47,22 +49,28 @@ namespace Importacao
                         var idImportacao = 0;
 
                         dtPlano = adpPlano.Listar(titular.Plano);
-                        dtPlanoCliente = adpPlanoCliente.Selecionar(titular.PlanoCliente);
+
+                        dtPlanoCliente = adpPlanoCliente.SelecionarPorNome(titular.PlanoCliente);
 
                         idplano = !dtPlano.Any() ? Convert.ToInt32(adpPlano.Inserir(titular.Plano)) : dtPlano[0].idplano;
                         idplanocliente = !dtPlanoCliente.Any() ? Convert.ToInt32(adpPlanoCliente.Inserir(titular.PlanoCliente)) : dtPlanoCliente[0].idplanocliente;
 
 
-                        idImportacao = Convert.ToInt32(adp.xico(1, titular.Titular, titular.NumeroContrato, idplano, idplanocliente, titular.Quantidade));
+                        idImportacao = Convert.ToInt32(adp.ImportacaoInserir(1, titular.Titular, titular.NumeroContrato, idplano, idplanocliente, titular.Quantidade));
 
                         foreach (var dep in titular.Dependentes)
                         {
-                            adp.DependentesInserir(idImportacao, dep.Nome);
+                            if (!string.IsNullOrWhiteSpace(dep.Nome))
+                            {
+                                adp.ImportacaoDetInserir(idImportacao, dep.Nome);
+                            }
                         }
                     }
                 }
 
-               trn.Commit();
+                trn.Commit();
+
+                Console.WriteLine("Importacao realizada com sucesso!!");
 
             }
             catch (Exception ex)

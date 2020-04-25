@@ -11,17 +11,17 @@ namespace BLL
         public static void Inserir(global::System.Nullable<int> idimportacao, string nome, string contrato, global::System.Nullable<int> idplano, 
             global::System.Nullable<int> idplanocliente, global::System.Nullable<int> qtd)
         {
-            using (var adp = new DAL.DsImportacaoDadosTableAdapters.ImportacaoDadosTableAdapter())
+            using (var adp = new DAL.DsImportacaoTableAdapters.ImportacaoTableAdapter())
             {
-                adp.xico(idimportacao, nome, contrato, idplano, idplanocliente,qtd);
+                adp.ImportacaoInserir(idimportacao, nome, contrato, idplano, idplanocliente,qtd);
             }
         }
 
         public static void InserirDependentes(global::System.Nullable<int> idimportacaodados, string dependentes)
         {
-            using (var adp = new DAL.DsImportacaoDadosTableAdapters.ImportacaoDadosTableAdapter())
+            using (var adp = new DAL.DsImportacaoTableAdapters.ImportacaoTableAdapter())
             {
-                adp.DependentesInserir(idimportacaodados, dependentes);
+                adp.ImportacaoDetInserir(idimportacaodados, dependentes);
             }
         }
     }
