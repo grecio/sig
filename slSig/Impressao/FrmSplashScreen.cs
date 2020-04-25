@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Impressao
 {
-    public partial class Form1 : Form
+    public partial class FrmSplashScreen : Form
     {
-        public Form1()
+        public FrmSplashScreen()
         {
             InitializeComponent();
+        }
+
+        private void FrmSplashScreen_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

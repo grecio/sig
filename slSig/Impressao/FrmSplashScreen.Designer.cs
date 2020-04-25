@@ -1,6 +1,6 @@
 ﻿namespace Impressao
 {
-    partial class Form1
+    partial class FrmSplashScreen
     {
         /// <summary>
         /// Required designer variable.
@@ -28,13 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // FrmSplashScreen
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.BackgroundImage = global::Impressao.Properties.Resources.LogoNP;
+            this.ClientSize = new System.Drawing.Size(400, 200);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "FrmSplashScreen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "FrmSplashScreen";
+            this.Load += new System.EventHandler(this.FrmSplashScreen_Load);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
     }
 }
-

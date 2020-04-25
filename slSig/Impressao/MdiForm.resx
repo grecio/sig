@@ -117,8 +117,32 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="LogoNP" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LogoNP.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <metadata name="menuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>115, 17</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="undoToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAA8AAAAOCAYAAADwikbvAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAISSURBVDhPbVKxbtNQFDXwBf0S4AdQRrqgAEu62UiIMqA4
+        AxJbnKqCshAnUiUqBLYRCLY8Z0kW5Bgh2jQCO2lAKTTBMJUlcVmAIT7cd12rEeqRrnWf3zv3nPvuU3AK
+        gsE+RCdE0wshvAHnHAv5+MsemJwkCX3nMkV/OEY4mHC++D/5C0Q/Y4h2gGuagV6ve0zm7RSi/YHXcTyF
+        v9uHtxOg0foIV3QQ7kdQi2tYubV+opzhTe8zV8/Ayn+AozhBGKWqV9UynJcCBwfDE7JUs6m6hCzQ6YYc
+        0onsvR9OoK6WkVcreLTVgGk1U/L7XgDH9eFvj5ks1TLFKI4RfZvBfu0hr5VhmBYs8ZaLKLvBJ1SdFmw3
+        gP3KhyMCmLZPh1zohgNVr/HBvKpTbtCegL5hp2TT8TCTSqeBepF70kEsHVA7xoYF9Z6ZkstbgufmtkhZ
+        eFS5gbXHApWHNkqVGrRSnXu9opF64Q65MXmdK+hQjFqDKv5KhXiuKWQ+/U09k9rS/ByWEgWKrRy3oeP8
+        8g0o9zebPL//Ia1+p/F0RkQmYoPuVpLzqwZy+RIuXFahtL1tbD4ViA7n3N+PGY3qEAhHM7gh3bI/JdJZ
+        nHFSsrR7cVnDzbvrUPr9PTyovkAnjLjf6jOXbzSLuiWD5rrwT6rudN9BOaJnGAxHuH5bjqNCLygdS26l
+        iEuFIlvMbGZRf/Ick69D/AOMHJRzfsxY+gAAAABJRU5ErkJggg==
+</value>
   </data>
+  <metadata name="statusStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>223, 17</value>
+  </metadata>
+  <metadata name="toolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>332, 17</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>51</value>
+  </metadata>
 </root>
