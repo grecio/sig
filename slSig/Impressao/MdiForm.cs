@@ -15,16 +15,19 @@ namespace Impressao
     {
         private int childFormNumber = 0;
 
-        public MdiForm()
+        public MdiForm(Thread mythread)
         {
             InitializeComponent();
 
-            var frmSplash = new FrmSplashScreen();
 
-            frmSplash.Show();
-            Thread.Sleep(3000);
+            if (mythread.ThreadState == ThreadState.Running)
+            {
+                Thread.Sleep(3000);
+                mythread.Abort();
 
-            frmSplash.Close();
+                this.BringToFront();
+                this.Focus();
+            }
 
 
         }
@@ -112,6 +115,24 @@ namespace Impressao
             {
                 childForm.Close();
             }
+        }
+
+        private void MdiForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void undoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Invoke((MethodInvoker)(() =>
+            {
+
+                var frm = new FrmImpressao();
+                frm.MdiParent = this;
+                frm.StartPosition = FormStartPosition.CenterScreen;
+                frm.Show();
+
+            }));
         }
     }
 }

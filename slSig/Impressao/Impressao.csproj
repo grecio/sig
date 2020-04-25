@@ -46,11 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmImpressao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmImpressao.Designer.cs">
+      <DependentUpon>FrmImpressao.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmSplashScreen.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmSplashScreen.Designer.cs">
       <DependentUpon>FrmSplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FromLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FromLogin.Designer.cs">
+      <DependentUpon>FromLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="MdiForm.cs">
       <SubType>Form</SubType>
@@ -60,8 +72,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmImpressao.resx">
+      <DependentUpon>FrmImpressao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmSplashScreen.resx">
       <DependentUpon>FrmSplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FromLogin.resx">
+      <DependentUpon>FromLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MdiForm.resx">
       <DependentUpon>MdiForm.cs</DependentUpon>
@@ -93,6 +111,25 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\LogoNP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\ezgif.com-webp-to-png.png" />
+    <Content Include="Resources\loginNP.png" />
+    <Content Include="Resources\logo-sempre.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{4e76637e-2b26-496f-8fa8-7b6cef5a02ec}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{94d596fe-480a-40ad-82b0-0e60f9468056}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Framework\Framework.csproj">
+      <Project>{6bc589e7-5250-4e20-bd77-be22ad951c33}</Project>
+      <Name>Framework</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,0 +1,1 @@
+This is PDF417 barcode encoded sample text printed on a CL900 from the driver SDK sample. Visit: http://www.entrustdatacard.com

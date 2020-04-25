@@ -53,6 +53,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DsBriefing.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DsCartao.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsCartao.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DsCliente.cs">
       <DependentUpon>DsCliente.xsd</DependentUpon>
     </Compile>
@@ -109,6 +114,17 @@
     </None>
     <None Include="DsBriefing.xss">
       <DependentUpon>DsBriefing.xsd</DependentUpon>
+    </None>
+    <None Include="DsCartao.xsc">
+      <DependentUpon>DsCartao.xsd</DependentUpon>
+    </None>
+    <None Include="DsCartao.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsCartao.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DsCartao.xss">
+      <DependentUpon>DsCartao.xsd</DependentUpon>
     </None>
     <None Include="DsCliente.xsc">
       <DependentUpon>DsCliente.xsd</DependentUpon>

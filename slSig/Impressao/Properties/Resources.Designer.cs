@@ -63,6 +63,36 @@ namespace Impressao.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ezgif_com_webp_to_png {
+            get {
+                object obj = ResourceManager.GetObject("ezgif.com-webp-to-png", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap loginNP {
+            get {
+                object obj = ResourceManager.GetObject("loginNP", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logo_sempre {
+            get {
+                object obj = ResourceManager.GetObject("logo-sempre", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap LogoNP {
             get {
                 object obj = ResourceManager.GetObject("LogoNP", resourceCulture);

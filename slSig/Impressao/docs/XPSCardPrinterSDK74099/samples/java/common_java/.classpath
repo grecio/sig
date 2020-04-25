@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry including="amd64/dxp01sdk_IBidiSpl_interop.dll|common_java/*.java|x86/dxp01sdk_IBidiSpl_interop.dll" kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Users/user/eclipse-workspace/Library/jna.zip"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
