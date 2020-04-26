@@ -134,5 +134,15 @@ namespace Impressao
 
             }));
         }
+
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Deseja realmente sair?", "Informação ao Usuário", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+
+                Application.Exit();
+
+            }
+        }
     }
 }
