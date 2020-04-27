@@ -35,17 +35,17 @@
             this.txtNumeroContrato = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lstDependentes = new System.Windows.Forms.ListBox();
+            this.lblPlano = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lblNumeroContrato = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.lblPlano = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.lblTitular = new System.Windows.Forms.Label();
             this.ptbCartao = new System.Windows.Forms.PictureBox();
             this.btnImprimir = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lstDependentes = new System.Windows.Forms.ListBox();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -130,6 +130,42 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Cartão";
             // 
+            // lstDependentes
+            // 
+            this.lstDependentes.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lstDependentes.FormattingEnabled = true;
+            this.lstDependentes.Location = new System.Drawing.Point(15, 70);
+            this.lstDependentes.Name = "lstDependentes";
+            this.lstDependentes.Size = new System.Drawing.Size(280, 130);
+            this.lstDependentes.TabIndex = 13;
+            // 
+            // lblPlano
+            // 
+            this.lblPlano.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblPlano.AutoSize = true;
+            this.lblPlano.BackColor = System.Drawing.Color.White;
+            this.lblPlano.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlano.ForeColor = System.Drawing.Color.Black;
+            this.lblPlano.Location = new System.Drawing.Point(301, 131);
+            this.lblPlano.MaximumSize = new System.Drawing.Size(270, 0);
+            this.lblPlano.Name = "lblPlano";
+            this.lblPlano.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblPlano.Size = new System.Drawing.Size(142, 13);
+            this.lblPlano.TabIndex = 9;
+            this.lblPlano.Text = "PLANO DO CONTRATO";
+            this.lblPlano.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(301, 118);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(37, 13);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Plano:";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -157,33 +193,6 @@
             this.lblNumeroContrato.Text = "NUMERO CONTRATO";
             this.lblNumeroContrato.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(301, 118);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(37, 13);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Plano:";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // lblPlano
-            // 
-            this.lblPlano.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblPlano.AutoSize = true;
-            this.lblPlano.BackColor = System.Drawing.Color.White;
-            this.lblPlano.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlano.ForeColor = System.Drawing.Color.Black;
-            this.lblPlano.Location = new System.Drawing.Point(301, 131);
-            this.lblPlano.MaximumSize = new System.Drawing.Size(270, 0);
-            this.lblPlano.Name = "lblPlano";
-            this.lblPlano.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblPlano.Size = new System.Drawing.Size(142, 13);
-            this.lblPlano.TabIndex = 9;
-            this.lblPlano.Text = "PLANO DO CONTRATO";
-            this.lblPlano.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Impressao.Properties.Resources.ezgif_com_webp_to_png;
@@ -205,6 +214,16 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(13, 54);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(71, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Dependentes";
             // 
             // lblTitular
             // 
@@ -236,25 +255,7 @@
             this.btnImprimir.TabIndex = 3;
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(13, 54);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Dependentes";
-            // 
-            // lstDependentes
-            // 
-            this.lstDependentes.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lstDependentes.FormattingEnabled = true;
-            this.lstDependentes.Location = new System.Drawing.Point(15, 70);
-            this.lstDependentes.Name = "lstDependentes";
-            this.lstDependentes.Size = new System.Drawing.Size(280, 130);
-            this.lstDependentes.TabIndex = 13;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
             // FrmImpressao
             // 

@@ -157,5 +157,10 @@ namespace Impressao
 
             }));
         }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Sistema Natal Printer:  Versão 0.5");
+        }
     }
 }

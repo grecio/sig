@@ -75,8 +75,11 @@ namespace Impressao
                     lstDependentes.Items.Add(item.dependentes);
                 }
             }
+        }
 
-        
+        private void Imprimir()
+        {
+            throw new NotImplementedException();
         }
 
         private void btnLerDadosContrato_Click(object sender, EventArgs e)
@@ -106,6 +109,19 @@ namespace Impressao
 
             lstDependentes.Items.Clear();
             txtNumeroContrato.Focus();
+        }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Imprimir();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Não foi possível conectar a impressora. Por favor verifique o LOG.");
+            }
         }
     }
 }
