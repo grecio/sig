@@ -79,6 +79,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DsPlano.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DsRptListaContratos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsRptListaContratos.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DsUsuario.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -158,6 +163,17 @@
     </None>
     <None Include="DsPlano.xss">
       <DependentUpon>DsPlano.xsd</DependentUpon>
+    </None>
+    <None Include="DsRptListaContratos.xsc">
+      <DependentUpon>DsRptListaContratos.xsd</DependentUpon>
+    </None>
+    <None Include="DsRptListaContratos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsRptListaContratos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DsRptListaContratos.xss">
+      <DependentUpon>DsRptListaContratos.xsd</DependentUpon>
     </None>
     <None Include="DsUsuario.xsc">
       <DependentUpon>DsUsuario.xsd</DependentUpon>

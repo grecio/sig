@@ -63,8 +63,15 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -81,6 +88,12 @@
     </Compile>
     <Compile Include="FrmImpressao.Designer.cs">
       <DependentUpon>FrmImpressao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmImpressaoContratos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmImpressaoContratos.Designer.cs">
+      <DependentUpon>FrmImpressaoContratos.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmSplashScreen.cs">
       <SubType>Form</SubType>
@@ -102,8 +115,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="reports\rptListaContratos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptListaContratos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
     <EmbeddedResource Include="FrmImpressao.resx">
       <DependentUpon>FrmImpressao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmImpressaoContratos.resx">
+      <DependentUpon>FrmImpressaoContratos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSplashScreen.resx">
       <DependentUpon>FrmSplashScreen.cs</DependentUpon>
@@ -124,6 +147,11 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="reports\rptListaContratos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptListaContratos.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <None Include="docs\527250-003A_SDK.pdf" />
     <None Include="docs\XPSCardPrinterSDK74099.zip" />
     <None Include="Impressao_TemporaryKey.pfx" />
@@ -173,6 +201,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

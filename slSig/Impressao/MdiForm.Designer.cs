@@ -33,13 +33,15 @@
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.editMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.undoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.relatóriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listaDeContratosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -48,6 +50,7 @@
             // 
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.editMenu,
+            this.relatóriosToolStripMenuItem,
             this.helpMenu});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
@@ -73,6 +76,28 @@
             this.undoToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.undoToolStripMenuItem.Text = "&Nova Impressão";
             this.undoToolStripMenuItem.Click += new System.EventHandler(this.undoToolStripMenuItem_Click);
+            // 
+            // sairToolStripMenuItem
+            // 
+            this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.sairToolStripMenuItem.Text = "&Sair";
+            this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
+            // 
+            // relatóriosToolStripMenuItem
+            // 
+            this.relatóriosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.listaDeContratosToolStripMenuItem});
+            this.relatóriosToolStripMenuItem.Name = "relatóriosToolStripMenuItem";
+            this.relatóriosToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.relatóriosToolStripMenuItem.Text = "Relatórios";
+            // 
+            // listaDeContratosToolStripMenuItem
+            // 
+            this.listaDeContratosToolStripMenuItem.Name = "listaDeContratosToolStripMenuItem";
+            this.listaDeContratosToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.listaDeContratosToolStripMenuItem.Text = "Impressão dos Contratos";
+            this.listaDeContratosToolStripMenuItem.Click += new System.EventHandler(this.listaDeContratosToolStripMenuItem_Click);
             // 
             // helpMenu
             // 
@@ -110,13 +135,6 @@
             this.toolStripStatusLabel.Size = new System.Drawing.Size(39, 17);
             this.toolStripStatusLabel.Text = "Status";
             // 
-            // sairToolStripMenuItem
-            // 
-            this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
-            this.sairToolStripMenuItem.Text = "&Sair";
-            this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
-            // 
             // MdiForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -152,6 +170,8 @@
         private System.Windows.Forms.ToolStripMenuItem helpMenu;
         private System.Windows.Forms.ToolTip toolTip;
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem relatóriosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listaDeContratosToolStripMenuItem;
     }
 }
 

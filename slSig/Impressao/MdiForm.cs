@@ -144,5 +144,18 @@ namespace Impressao
 
             }
         }
+
+        private void listaDeContratosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Invoke((MethodInvoker)(() =>
+            {
+
+                var frm = new FrmImpressaoContratos();
+                frm.MdiParent = this;
+                frm.StartPosition = FormStartPosition.CenterScreen;
+                frm.Show();
+
+            }));
+        }
     }
 }
