@@ -120,6 +120,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>rptCartao.rpt</DependentUpon>
       <SubType>Component</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
     <Compile Include="reports\rptListaContratos.cs">
       <AutoGen>True</AutoGen>
@@ -156,6 +157,7 @@
     <EmbeddedResource Include="reports\rptCartao.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptCartao.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="reports\rptListaContratos.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

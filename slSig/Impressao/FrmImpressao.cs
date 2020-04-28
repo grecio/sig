@@ -1,4 +1,6 @@
-﻿using Framework;
+﻿using CrystalDecisions.CrystalReports.Engine;
+using CrystalDecisions.Shared;
+using Framework;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -79,7 +81,53 @@ namespace Impressao
 
         private void Imprimir()
         {
-            throw new NotImplementedException();
+
+            ReportDocument cryRpt = new ReportDocument();
+            string path_ = System.AppDomain.CurrentDomain.BaseDirectory;
+            string caminho = path_ + "reports/rptCartao.rpt";
+            cryRpt.Load(caminho);
+
+
+            ConnectionInfo connInfo = new ConnectionInfo();
+            connInfo.ServerName = "144.217.49.13";
+            connInfo.DatabaseName = "natalprinter";
+            connInfo.UserID = "sa";
+            connInfo.Password = "buga@tec_buga1";
+
+            TableLogOnInfo tableLogOnInfo = new TableLogOnInfo();
+            tableLogOnInfo.ConnectionInfo = connInfo;
+
+
+            foreach (Table table in cryRpt.Database.Tables)
+            {
+                table.ApplyLogOnInfo(tableLogOnInfo);
+                table.LogOnInfo.ConnectionInfo.ServerName = connInfo.ServerName;
+                table.LogOnInfo.ConnectionInfo.DatabaseName = connInfo.DatabaseName;
+                table.LogOnInfo.ConnectionInfo.UserID = connInfo.UserID;
+                table.LogOnInfo.ConnectionInfo.Password = connInfo.Password;
+
+                // Apply the schema name to the table's location
+                table.Location = "dbo." + table.Location;
+            }
+
+            if (cryRpt.DataDefinition.ParameterFields.Count > 0)
+            {
+                foreach (ParameterFieldDefinition crDef in cryRpt.DataDefinition.ParameterFields)
+                {
+                    // Check for empty report name
+                    // Sub Reports will have a value, Main Report does not
+                    // Sub Report Parameters are passed by the Main Report
+                    if (crDef.ReportName == string.Empty)
+                    {
+                        object objValue = txtNumeroContrato.Text;
+                        cryRpt.SetParameterValue(crDef.ParameterFieldName, objValue);
+                    }
+                }
+            }
+
+
+            cryRpt.PrintToPrinter(1, false, 0, 0);
+
         }
 
         private void btnLerDadosContrato_Click(object sender, EventArgs e)
