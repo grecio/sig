@@ -79,6 +79,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DsPlano.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DsRptCartao.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsRptCartao.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DsRptListaContratos.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -163,6 +168,17 @@
     </None>
     <None Include="DsPlano.xss">
       <DependentUpon>DsPlano.xsd</DependentUpon>
+    </None>
+    <None Include="DsRptCartao.xsc">
+      <DependentUpon>DsRptCartao.xsd</DependentUpon>
+    </None>
+    <None Include="DsRptCartao.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsRptCartao.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DsRptCartao.xss">
+      <DependentUpon>DsRptCartao.xsd</DependentUpon>
     </None>
     <None Include="DsRptListaContratos.xsc">
       <DependentUpon>DsRptListaContratos.xsd</DependentUpon>
